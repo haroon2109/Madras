@@ -1,0 +1,264 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+enum Role {
+  ADMIN
+  ANALYST
+  VIEWER
+  CITIZEN
+}
+
+// NOTE: Local MVP runs on SQLite (`DATABASE_URL="file:./prisma/dev.db"`).
+// Prisma 7 validates the schema against the datasource provider, and SQLite
+// does not support `enum`. Keep `User.role` as a plain String locally
+// ("ADMIN" | "ANALYST" | "VIEWER" | "CITIZEN"); Postgres deployments can
+// reintroduce the native enum. App code must compare `user.role` against
+// plain strings and must NOT import a `Role` enum from `@prisma/client`.
+
+model User {
+  id           String   @id @default(cuid())
+  name         String?
+  email        String   @unique
+  passwordHash String
+  role         String   @default("VIEWER")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  subscriptions ZoneSubscription[]
+  observations FieldObservation[]
+}
+
+// Feature 12 — citizen subscriptions: a public user can follow one or more
+// zones and receive per-zone alert dispatches when creds are configured.
+model ZoneSubscription {
+  id        String   @id @default(cuid())
+  userId    String
+  zoneId    String
+  channel   String   @default("email") // email | sms | whatsapp
+  phone     String?  // e164, only meaningful for sms / whatsapp channels
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  zone  Zone  @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, zoneId])
+  @@index([zoneId, active])
+}
+
+// Feature 13 — analyst-entered ground-truth observations.
+// Rainfall (mm/day) and/or observed waterlogging depth (cm) for a zone on a
+// calendar date (IST). Stored as a first-class observed series so /accuracy
+// and /analytics can compare model output against field readings.
+model FieldObservation {
+  id        String   @id @default(cuid())
+  zoneId    String
+  userId    String
+  date      DateTime // calendar date (IST) as UTC midnight
+  rainfallMm Float?  // manual rainfall observation, mm/day; null if not measured
+  depthCm   Int?     // observed waterlogging depth in cm; null if not observed
+  note      String?
+  source    String   @default("field") // field | citizen
+  createdAt DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  zone  Zone  @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+
+  @@unique([zoneId, date])
+  @@index([date])
+  @@index([zoneId, date])
+}
+
+
+model Zone {
+  id             String   @id @default(cuid())
+  number         Int      @unique
+  name           String   @unique
+  latitude       Float
+  longitude      Float
+  // Daily rainfall thresholds in mm (24h) used for decision support.
+  watchThreshold   Float  @default(15)
+  warningThreshold Float  @default(30)
+  alertThreshold   Float  @default(60)
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  snapshots       ForecastSnapshot[]
+  alerts          Alert[]
+  hourlyRainfall  HourlyRainfall[]
+  incidents       Incident[]
+  subscriptions   ZoneSubscription[]
+  observations   FieldObservation[]
+}
+
+/* ------------------------------------------------------------------ */
+/* Feature 2 — Waterlogging / flood incident reporting                 */
+/* Field-team + citizen reports of waterlogging, tracked per zone and  */
+/* rendered as a second layer on the dashboard map.                    */
+/* ------------------------------------------------------------------ */
+
+model Incident {
+  id           String    @id @default(cuid())
+  zoneId       String
+  latitude     Float
+  longitude    Float
+  // Observed water depth in cm (0 = damp / ankle-deep unknown).
+  depthCm      Int       @default(0)
+  description  String    @default("")
+  photoUrl     String?
+  // OPEN | VERIFIED | RESOLVED | REJECTED
+  status       String    @default("OPEN")
+  // field | citizen
+  source       String    @default("field")
+  reporterName String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  resolvedAt   DateTime?
+
+  zone Zone @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+
+  @@index([zoneId, status])
+  @@index([status, createdAt])
+}
+
+/* ------------------------------------------------------------------ */
+/* Feature 8 — Reservoir / lake storage levels                         */
+/* Manual-entry storage readings for Chennai's drinking-water lakes.   */
+/* Seeded from src/config/reservoirs.json; readings entered in admin.  */
+/* ------------------------------------------------------------------ */
+
+model Reservoir {
+  id            String   @id @default(cuid())
+  name          String   @unique
+  capacityTmcft Float
+  latitude      Float
+  longitude     Float
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  readings ReservoirReading[]
+}
+
+model ReservoirReading {
+  id          String   @id @default(cuid())
+  reservoirId String
+  // Calendar date (IST) the reading applies to.
+  date        DateTime
+  levelTmcft  Float
+  storagePct  Float
+  inflowCusec Float    @default(0)
+  outflowCusec Float   @default(0)
+  source      String   @default("manual")
+  createdAt   DateTime @default(now())
+
+  reservoir Reservoir @relation(fields: [reservoirId], references: [id], onDelete: Cascade)
+
+  @@unique([reservoirId, date])
+  @@index([date])
+}
+
+/* ------------------------------------------------------------------ */
+/* Feature 9 — Tide / drainage-backflow readings                       */
+/* Astronomical estimate is computed in src/lib/tide.ts (no API key    */
+/* needed). Optional manual harbour readings refine it per date.       */
+/* ------------------------------------------------------------------ */
+
+model TideReading {
+  id        String   @id @default(cuid())
+  // Calendar date (IST) as UTC-midnight key.
+  date      DateTime @unique
+  highTideAt String  // "HH:MM" IST
+  highTideM  Float
+  lowTideAt  String?
+  lowTideM   Float?
+  source    String   @default("manual")
+  createdAt DateTime @default(now())
+}
+
+model ForecastSnapshot {
+  id            String   @id @default(cuid())
+  zoneId        String
+  // When the forecast was fetched from the data source.
+  capturedAt    DateTime @default(now())
+  // The calendar date (IST) this daily forecast applies to.
+  forecastDate  DateTime
+  precipSumMm   Float
+  precipProbMax Float
+  tempMaxC      Float
+  tempMinC      Float
+  windMaxKmh    Float
+  riskLevel     String
+  source        String   @default("open-meteo")
+  rawJson       String
+
+  zone Zone @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+
+  @@unique([zoneId, forecastDate, capturedAt])
+  @@index([zoneId, forecastDate])
+}
+
+model Alert {
+  id         String    @id @default(cuid())
+  zoneId     String
+  level      String // WATCH | WARNING | ALERT
+  title      String
+  message    String
+  actions    String // JSON string array of recommended actions
+  createdAt  DateTime  @default(now())
+  resolvedAt DateTime?
+
+  zone Zone @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+  deliveries DeliveryLog[]
+
+  @@index([zoneId, createdAt])
+}
+
+/* ------------------------------------------------------------------ */
+/* Feature 5 — SMS / WhatsApp alert delivery log                       */
+/* Records every outbound alert dispatch so the dashboard can show     */
+/* delivery status and avoid duplicate sends. The actual send is       */
+/* delegated to a provider adapter (Twilio / WhatsApp Business API).   */
+/* ------------------------------------------------------------------ */
+
+model DeliveryLog {
+  id         String   @id @default(cuid())
+  alertId    String
+  channel    String // "sms" | "whatsapp"
+  recipient  String // phone number or WhatsApp ID
+  status     String @default("queued") // queued | sent | delivered | failed
+  providerMsgId String?
+  error      String?
+  sentAt     DateTime?
+  createdAt  DateTime @default(now())
+
+  alert Alert @relation(fields: [alertId], references: [id], onDelete: Cascade)
+
+  @@index([alertId, channel])
+  @@index([status])
+}
+
+// Normalized hourly rainfall loaded from the processed CSV output of the
+// preprocessing pipeline (src/lib/processing). One row per zone × model ×
+// hour; rainfallMmHr stays null when the source value was missing/invalid.
+model HourlyRainfall {
+  id           String   @id @default(cuid())
+  zoneId       String
+  model        String // "ecmwf" | "gfs"
+  timestamp    DateTime // UTC instant of the hour
+  rainfallMmHr Float?
+  source       String   @default("processed-csv")
+  createdAt    DateTime @default(now())
+
+  zone Zone @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+
+  @@unique([zoneId, model, timestamp])
+  @@index([timestamp])
+  @@index([model, timestamp])
+}

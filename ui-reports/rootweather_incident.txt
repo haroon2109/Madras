@@ -1,0 +1,62 @@
+Back to weather
+Home
+Report waterlogging or flooding
+
+Tell the operations team where water is accumulating. Include your zone and a safe location if possible.
+
+File a report
+
+Your report is reviewed by the Greater Chennai operations team. You do not need an account, but signing in lets you follow updates.
+
+What do you see?
+
+Pick the zone where the waterlogging is happening. If you know the approximate depth, add it — it helps the team prioritize.
+
+Zone *
+Select a zone
+Zone 1 — Thiruvottiyur
+Zone 2 — Manali
+Zone 3 — Madhavaram
+Zone 4 — Tondiarpet
+Zone 5 — Royapuram
+Zone 6 — Thiru-Vi-Ka Nagar
+Zone 7 — Ambattur
+Zone 8 — Anna Nagar
+Zone 9 — Teynampet
+Zone 10 — Kodambakkam
+Zone 11 — Valasaravakkam
+Zone 12 — Alandur
+Zone 13 — Adyar
+Zone 14 — Perungudi
+Zone 15 — Sholinganallur
+Water depth (cm, optional)
+cm
+Your name (optional)
+What is happening? *
+Be specific about location and depth.
+500 characters left
+File report
+This creates an open report for the operations team.
+RECENT REPORTS
+4 reports
+Zone 2 — Manali
+RESOLVED
+15 cm · minor · field
+
+Zone 4 — Tondiarpet
+VERIFIED
+25 cm · moderate · field
+
+Washermenpet lowland — pumps deployed · by Zone control room
+
+Zone 13 — Adyar
+RESOLVED
+70 cm · severe · field
+
+Velachery 100-ft road dip — bus route suspended · by Zone control room
+
+Zone 9 — Teynampet
+RESOLVED
+45 cm · moderate · field
+
+T. Nagar subway approach — knee-deep, traffic diverted · by Zone control room

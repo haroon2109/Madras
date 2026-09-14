@@ -1,0 +1,84 @@
+Chennai rainfall summary
+
+Madras Weather Monitor
+
+Live · Open-Meteo
+Home
+City rainfall summary
+
+Last 14 days of observations plus the 7-day outlook — public view.
+
+Generated 13 Sept 2026, 4:44 pm IST
+14-day total
+38.4 mm
+Wettest day
+22.2 mm
+Sep 08
+Wettest zone
+46.9 mm
+Sholinganallur
+Zones at warning+
+0
+of 15 zones
+Current risk mix
+Low
+15
+Watch
+0
+Warning
+0
+Alert
+0
+7-day outlook
+City mean per day
+DATE	CITY MEAN (MM)	OUTLOOK
+Sep 13	1.6	
+
+Sep 14	3.3	
+
+Sep 15	0.4	
+
+Sep 16	0.8	
+
+Sep 17	0.6	
+
+Sep 18	5.2	
+
+Sep 19	5.3	
+Rainfall trend
+DATE	CITY MEAN (MM)	WETTEST ZONE (MM)
+Aug 31	0.2	1.3
+Sep 01	1.8	4.1
+Sep 02	1.6	2.3
+Sep 03	4.6	6.8
+Sep 04	2.1	2.7
+Sep 05	3.6	5.1
+Sep 06	2.0	3.7
+Sep 07	0.6	1.3
+Sep 08	7.7	22.2
+Sep 09	0.6	1.2
+Sep 10	2.1	2.7
+Sep 11	9.8	13.1
+Sep 12	1.7	2.8
+Zone detail
+15 zones
+ZONE	TODAY (MM)	RISK	WINDOW TOTAL (MM)	RAINY DAYS	WETTEST DAY
+Thiruvottiyur #1	—		29.2	10	13.1 mm · Sep 11
+Manali #2	—		29.2	10	13.1 mm · Sep 11
+Madhavaram #3	—		29.2	10	13.1 mm · Sep 11
+Tondiarpet #4	—		34.4	11	11.4 mm · Sep 11
+Royapuram #5	—		34.4	11	11.4 mm · Sep 11
+Thiru-Vi-Ka Nagar #6	—		34.4	11	11.4 mm · Sep 11
+Ambattur #7	—		37.1	12	11.5 mm · Sep 11
+Anna Nagar #8	—		34.4	11	11.4 mm · Sep 11
+Teynampet #9	—		45.7	11	10.9 mm · Sep 11
+Kodambakkam #10	—		45.7	11	10.9 mm · Sep 11
+Valasaravakkam #11	—		45.6	12	10.5 mm · Sep 08
+Alandur #12	—		42.3	11	13.2 mm · Sep 08
+Adyar #13	—		45.7	11	10.9 mm · Sep 11
+Perungudi #14	—		42.3	11	13.2 mm · Sep 08
+Sholinganallur #15	—		46.9	12	22.2 mm · Sep 08
+
+Weather data sourced from Open-Meteo (ECMWF & GFS models). Tide data computed from astronomical estimates.
+
+Madras Weather Monitor — Helping Chennai stay prepared, one zone at a time.

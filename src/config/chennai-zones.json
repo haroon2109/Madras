@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "city": "Chennai",
+  "timezone": "Asia/Kolkata",
+  "source": "Greater Chennai Corporation zone numbering (1-15). Centroid coordinates are approximate and can be refined in place.",
+  "notes": "Zone data lives ONLY here — application code must read it via src/lib/zones.ts and never hardcode zone names or coordinates. geometry is optional GeoJSON (RFC 7946): type Polygon or MultiPolygon, positions as [longitude, latitude]. Zones are centroid-only until survey-grade boundaries are added; set geometry to null or provide a boundary object per zone.",
+  "mapCenter": { "latitude": 13.05, "longitude": 80.24 },
+  "zones": [
+    { "zoneId": "zone-01", "number": 1, "name": "Thiruvottiyur", "centroid": { "latitude": 13.157, "longitude": 80.302 }, "geometry": null },
+    { "zoneId": "zone-02", "number": 2, "name": "Manali", "centroid": { "latitude": 13.166, "longitude": 80.26 }, "geometry": null },
+    { "zoneId": "zone-03", "number": 3, "name": "Madhavaram", "centroid": { "latitude": 13.148, "longitude": 80.228 }, "geometry": null },
+    { "zoneId": "zone-04", "number": 4, "name": "Tondiarpet", "centroid": { "latitude": 13.12, "longitude": 80.276 }, "geometry": null },
+    { "zoneId": "zone-05", "number": 5, "name": "Royapuram", "centroid": { "latitude": 13.105, "longitude": 80.295 }, "geometry": null },
+    { "zoneId": "zone-06", "number": 6, "name": "Thiru-Vi-Ka Nagar", "centroid": { "latitude": 13.117, "longitude": 80.245 }, "geometry": null },
+    { "zoneId": "zone-07", "number": 7, "name": "Ambattur", "centroid": { "latitude": 13.114, "longitude": 80.154 }, "geometry": null },
+    { "zoneId": "zone-08", "number": 8, "name": "Anna Nagar", "centroid": { "latitude": 13.085, "longitude": 80.21 }, "geometry": null },
+    { "zoneId": "zone-09", "number": 9, "name": "Teynampet", "centroid": { "latitude": 13.035, "longitude": 80.245 }, "geometry": null },
+    { "zoneId": "zone-10", "number": 10, "name": "Kodambakkam", "centroid": { "latitude": 13.053, "longitude": 80.224 }, "geometry": null },
+    { "zoneId": "zone-11", "number": 11, "name": "Valasaravakkam", "centroid": { "latitude": 13.043, "longitude": 80.169 }, "geometry": null },
+    { "zoneId": "zone-12", "number": 12, "name": "Alandur", "centroid": { "latitude": 13.002, "longitude": 80.203 }, "geometry": null },
+    { "zoneId": "zone-13", "number": 13, "name": "Adyar", "centroid": { "latitude": 13.001, "longitude": 80.256 }, "geometry": null },
+    { "zoneId": "zone-14", "number": 14, "name": "Perungudi", "centroid": { "latitude": 12.96, "longitude": 80.24 }, "geometry": null },
+    { "zoneId": "zone-15", "number": 15, "name": "Sholinganallur", "centroid": { "latitude": 12.9, "longitude": 80.227 }, "geometry": null }
+  ]
+}

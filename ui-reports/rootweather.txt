@@ -1,0 +1,756 @@
+Chennai Weather
+
+Madras Weather Monitor
+
+Live · Open-Meteo
+Home
+Staff sign in
+Chennai Weather Today
+
+Check rainfall forecasts, flood risk levels, and tide conditions for all 15 zones across Greater Chennai. Helps citizens and emergency teams stay prepared.
+
+Sunday, 13 September 2026
+Rainy Zones
+15
+out of 15 zones
+Under Warning
+0
+heavy rain expected
+Critical Alert
+0
+activate response
+High Tide
+1.17
+m
+at 12:22 IST
+astronomical estimate
+Active alerts
+Full report
+No active alerts right now.
+All Zones — 24hr Forecast
+15 zones reporting
+ZONE 1
+Thiruvottiyur
+Low
+24h Rainfall
+2.7 mm
+73% chance of rain
+Temperature
+25.1° / 32.8° C
+Wind up to 16 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+14 WARDS IN THIS ZONE
+W1
+Kathivakkam
+W2
+Ennore
+W3
+Ernavoor
+W4
+Ajax
+W5
+Tiruvottiyur
+W6
+Kaladipet
+W7
+Rajakadai
+W8
+Kodungaiyur (West)
+W9
+Kodungaiyur (East)
+W10
+Dr. Radhakrishnan Nagar (North)
+W11
+Cheriyan Nagar (North)
+W12
+Jeeva Nagar (North)
+W13
+Cheriyan Nagar (South)
+W14
+Jeeva Nagar (South)
+ZONE 2
+Manali
+Low
+24h Rainfall
+2.7 mm
+73% chance of rain
+Temperature
+25.2° / 32.9° C
+Wind up to 16 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+7 WARDS IN THIS ZONE
+W15
+Edyanchavadi
+W16
+Kadapakkam
+W17
+Theeyambakkam
+W18
+Manali
+W19
+Mathur
+W20
+Sanjeevirayanpet
+W21
+Grace Garden
+ZONE 3
+Madhavaram
+Low
+24h Rainfall
+2.7 mm
+73% chance of rain
+Temperature
+25.2° / 32.9° C
+Wind up to 16 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+12 WARDS IN THIS ZONE
+W22
+Kavankarai
+W23
+Puzhal
+W24
+Puthagram
+W25
+Kathirvedu
+W26
+Lakshmipuram - Madhavaram
+W27
+Assisi Nagar
+W28
+Chinnasekkadu
+W29
+Madhavaram
+W30
+Ma-Po-Si Nagar
+W31
+Royapuram (Madhavaram)
+W32
+Singarathottam
+W33
+Narayanappa Thottam
+ZONE 4
+Tondiarpet
+Low
+24h Rainfall
+2.2 mm
+76% chance of rain
+Temperature
+25.5° / 32.4° C
+Wind up to 13 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+15 WARDS IN THIS ZONE
+W34
+Korukkupet
+W35
+Mottai Thottam
+W36
+Kumarasamy Nagar (South)
+W37
+Dr. Radhakrishnan Nagar (South)
+W38
+Kumarasamy Nagar (North)
+W39
+Vijayaragavalu Nagar (West)
+W40
+Tondiarpet
+W41
+Old Washermenpet
+W42
+Meenakshiammanpet
+W43
+Kondithope
+W44
+Sevenwells (North)
+W45
+Amman Koil
+W46
+Muthialpet
+W47
+Vallalseethakathi Nagar
+W48
+Kachaleeswarar Nagar
+ZONE 5
+Royapuram
+Low
+24h Rainfall
+2.2 mm
+76% chance of rain
+Temperature
+25.5° / 32.4° C
+Wind up to 13 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+15 WARDS IN THIS ZONE
+W49
+Sevenwells (South)
+W50
+Sowcarpet
+W51
+Basin Bridge
+W52
+Vyasarpet (South)
+W53
+Vyasarpet (North)
+W54
+Perambur (North)
+W55
+Perambur (East)
+W56
+Elango Nagar
+W57
+Perambur (South)
+W58
+Thiru-Vi-Ka Nagar
+W59
+Wadia Nagar
+W60
+Dr. Sathyavanimuthu Nagar
+W61
+Pulianthope
+W62
+Dr. Besant Nagar
+W63
+Pedhunayakanpet
+ZONE 6
+Thiru-Vi-Ka Nagar
+Low
+24h Rainfall
+2.2 mm
+76% chance of rain
+Temperature
+25.5° / 32.4° C
+Wind up to 13 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+15 WARDS IN THIS ZONE
+W64
+Perumal Koil Thottam
+W65
+Thattankulam
+W66
+Choolai
+W67
+Poonga Nagar
+W68
+Elephant Gate
+W69
+Edapalayam
+W70
+Agaram (North)
+W71
+Sembiam
+W72
+Siruvalloor
+W73
+Nagammai Ammaiyar Nagar
+W74
+Agaram (South)
+W75
+Vidhudalai Gurusami Nagar
+W76
+Ayanavaram
+W77
+Nagammaiammaiyar Nagar (South)
+W78
+Panneer Selvam Nagar
+ZONE 7
+Ambattur
+Low
+24h Rainfall
+1.6 mm
+76% chance of rain
+Temperature
+25.2° / 33.6° C
+Wind up to 13 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+15 WARDS IN THIS ZONE
+W79
+Maraimalai Adigal Nagar
+W80
+Maraimalai Adigal Nagar (South)
+W81
+Purasawalkam
+W82
+Kolathur
+W83
+Villiwakkam (North)
+W84
+Villiwakkam (South)
+W85
+Virugambakkam (North)
+W86
+Anna Nagar (West)
+W87
+Anna Nagar (Central)
+W88
+Anna Nagar (East)
+W89
+Shenoy Nagar
+W90
+Kilpauk (North)
+W91
+Gangadeeswarar Koil
+W92
+Kilpauk (South)
+W93
+Amanjikarai (North)
+ZONE 8
+Anna Nagar
+Low
+24h Rainfall
+2.2 mm
+76% chance of rain
+Temperature
+25.5° / 32.4° C
+Wind up to 13 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+15 WARDS IN THIS ZONE
+W94
+Amanjikarai (Central)
+W95
+Amanjikarai (West)
+W96
+Periyar Nagar (North)
+W97
+Periyar Nagar (West)
+W98
+Nungambakkam
+W99
+Adikesavapuram
+W100
+Nehru Nagar
+W101
+Chintadripet
+W102
+Komaleeswaranpet
+W103
+Balasubramanya Nagar
+W104
+Thiruvotteeswaranpet
+W105
+Natesan Nagar
+W106
+Chepauk
+W107
+Zambazaar
+W108
+Umaru Pulavar Nagar
+ZONE 9
+Teynampet
+Low
+24h Rainfall
+1.3 mm
+76% chance of rain
+Temperature
+25.8° / 32.1° C
+Wind up to 14 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+18 WARDS IN THIS ZONE
+W109
+Triplicane
+W110
+Marina
+W111
+Krishnampet
+W112
+Bharathi Nagar
+W113
+Azad Nagar (North)
+W114
+Bharathidasan Nagar
+W115
+Azad Nagar (South)
+W116
+Vivekananda Puram
+W117
+Ajnugam Ammaiyar Nagar
+W118
+Kosappet
+W119
+Pattalam
+W120
+Anbazhagan Nagar
+W121
+Perumalpet
+W122
+Kannappar Nagar
+W123
+Pattalam (South)
+W124
+Chetpet
+W125
+Egmore
+W126
+Pudupet
+ZONE 10
+Kodambakkam
+Low
+24h Rainfall
+1.3 mm
+76% chance of rain
+Temperature
+25.8° / 32.1° C
+Wind up to 14 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+16 WARDS IN THIS ZONE
+W127
+Ko-Su-Mani Nagar
+W128
+Nakeerar Nagar
+W129
+Thousand Lights
+W130
+Azhagiri Nagar
+W131
+Amir Mahal
+W132
+Royapettah
+W133
+Teynampet
+W134
+Sathyamurthy Nagar
+W135
+Alwarpet (North)
+W136
+Alwarpet (South)
+W137
+Vadapalani (West)
+W138
+Vadapalani (East)
+W139
+Kalaivanar Nagar
+W140
+Navalar Nedunchezian Nagar (West)
+W141
+Navalar Nedunchezian Nagar (East)
+W142
+Ashok Nagar
+ZONE 11
+Valasaravakkam
+Low
+24h Rainfall
+0.8 mm
+76% chance of rain
+Temperature
+25.4° / 34.1° C
+Wind up to 11 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+13 WARDS IN THIS ZONE
+W143
+M.G.R. Nagar
+W144
+Kamaraj Nagar (North)
+W145
+Kamaraj Nagar (South)
+W146
+Thyagaraya Nagar
+W147
+Rajaji Nagar
+W148
+Virugambakkam (South)
+W149
+Saligramam
+W150
+Kodambakkam (North)
+W151
+Kodambakkam (South)
+W152
+Saidapet
+W153
+Kumaran Nagar (North)
+W154
+Kumaran Nagar (South)
+W155
+Saidapet (West)
+ZONE 12
+Alandur
+Low
+24h Rainfall
+0.3 mm
+76% chance of rain
+Temperature
+25.5° / 35.0° C
+Wind up to 12 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+12 WARDS IN THIS ZONE
+W156
+Kalaingar Karunanidhi Nagar
+W157
+V O C Nagar
+W158
+G D Naidu Nagar (East)
+W159
+G. D Naidu Nagar (West)
+W160
+Guindy (West)
+W161
+Guindy (East)
+W162
+Beemannapettai
+W163
+Thiruvalluvar Nagar
+W164
+Madavaperumal Puram
+W165
+Karaneeswarpuram
+W166
+Santhome
+W167
+Mylapore
+ZONE 13
+Adyar
+Low
+24h Rainfall
+1.3 mm
+76% chance of rain
+Temperature
+25.7° / 32.1° C
+Wind up to 14 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+13 WARDS IN THIS ZONE
+W170
+Avvai Nagar (South)
+W171
+Raja Annamalai Puram
+W172
+Avvai Nagar (North)
+W173
+Adyar (West)
+W174
+Adyar (East)
+W175
+Velachery
+W176
+Thiruvanmiyur (West)
+W177
+Thiruvanmiyur (East)
+W178
+Besant Nagar
+W179
+Urur
+W180
+Adampakkam
+W181
+Velachery West
+W182
+Gandhi Salai
+ZONE 14
+Perungudi
+Low
+24h Rainfall
+0.3 mm
+76% chance of rain
+Temperature
+25.5° / 35.0° C
+Wind up to 12 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+11 WARDS IN THIS ZONE
+W168
+Taramani
+W169
+Ullagaram
+W183
+Puzhuthivakkam
+W184
+Kottivakkam
+W185
+Pallikaranai
+W186
+Palavakkam
+W187
+Madipakkam
+W188
+Jaladianpet
+W189
+Neelangarai
+W190
+Thoraipakkam
+W191
+Injambakkam
+ZONE 15
+Sholinganallur
+Low
+24h Rainfall
+0.6 mm
+76% chance of rain
+Temperature
+25.5° / 34.3° C
+Wind up to 14 km/h
+Rainfall intensity
+Light
+What this means for you
+
+Conditions look calm today.
+
+No unusual rainfall expected.
+Normal movement and routines are fine.
+Keep an eye on local news if the weather changes.
+9 WARDS IN THIS ZONE
+W192
+Karapakkam
+W193
+Sholinganallur
+W194
+Uthandi
+W195
+Semmancheri
+W196
+Navalur
+W197
+Siruseri
+W198
+Kelambakkam
+W199
+Sithalapakkam
+W200
+Medavakkam
+How to use this page
+Find your zone
+
+Look for your zone name above. Chennai has 15 administrative zones covering 200 wards.
+
+Check the risk level
+
+Green = safe, Yellow = watch, Orange = warning, Red = alert. Higher risk means more likely flooding.
+
+Take action if needed
+
+If your zone shows warning or alert, avoid low-lying areas, move valuables upstairs, and follow local authorities' guidance.
+
+Frequently Asked Questions
+How accurate is this forecast?
+
+We use data from Open-Meteo which aggregates forecasts from ECMWF and GFS weather models. These are the same models used by meteorological departments worldwide. Forecasts are updated every 3 hours.
+
+What do the risk levels mean?
+
+Low — No significant rain expected. Normal conditions.
+Watch — Moderate rain possible. Keep an eye on low-lying areas.
+Warning — Heavy rain likely. Prepare for possible waterlogging.
+Alert — Very heavy rain expected. Activate flood precautions now.
+
+What is backflow risk?
+
+When heavy rain coincides with high tide, seawater can prevent storm drains from emptying into the ocean. This causes water to back up into streets and homes in coastal areas. Zones 1, 2, 4, 5, 13, 14, and 15 are coastal.
+
+Can I report flooding in my area?
+
+Yes — use the "Report waterlogging" link below to file a citizen report for your zone. You can also subscribe to zone alerts if you create a free citizen account.
+
+Report waterlogging
+Follow zones
+Create citizen account
+
+Weather data sourced from Open-Meteo (ECMWF & GFS models). Tide data computed from astronomical estimates.
+
+Madras Weather Monitor — Helping Chennai stay prepared, one zone at a time.

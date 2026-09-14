@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Chennai Central railway station illustration">
+  <defs>
+    <linearGradient id="csky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ADCF5"/>
+      <stop offset="0.6" stop-color="#C9EEFB"/>
+      <stop offset="1" stop-color="#EAF8FD"/>
+    </linearGradient>
+    <linearGradient id="cplaza" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DDD2B8"/>
+      <stop offset="1" stop-color="#CFC2A5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#csky)"/>
+
+  <circle cx="170" cy="160" r="90" fill="#FFE9A8" opacity="0.5"/>
+  <circle cx="170" cy="160" r="54" fill="#FFD866"/>
+
+  <g fill="#FFFFFF" opacity="0.92">
+    <ellipse cx="820" cy="130" rx="56" ry="22"/>
+    <ellipse cx="872" cy="118" rx="42" ry="18"/>
+    <ellipse cx="1030" cy="220" rx="40" ry="16"/>
+    <ellipse cx="420" cy="200" rx="40" ry="16" opacity="0.8"/>
+  </g>
+
+  <g stroke="#47617E" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M320 300 q10 -12 20 0 q10 -12 20 0"/>
+    <path d="M960 320 q9 -11 18 0 q9 -11 18 0"/>
+  </g>
+
+  <!-- side wings -->
+  <rect x="60" y="600" width="90" height="170" fill="#C1554E"/>
+  <rect x="60" y="600" width="90" height="12" fill="#F3E9DC"/>
+  <rect x="1050" y="600" width="90" height="170" fill="#C1554E"/>
+  <rect x="1050" y="600" width="90" height="12" fill="#F3E9DC"/>
+
+  <!-- main block -->
+  <rect x="150" y="520" width="900" height="250" fill="#B5504A"/>
+  <rect x="150" y="520" width="900" height="18" fill="#F3E9DC"/>
+  <rect x="150" y="752" width="900" height="18" fill="#F3E9DC"/>
+
+  <!-- windows main block (left of tower) -->
+  <g fill="#6E2A26" stroke="#F3E9DC" stroke-width="4">
+    <path d="M204 700 v-52 a20 20 0 0 1 40 0 v52 z"/>
+    <path d="M284 700 v-52 a20 20 0 0 1 40 0 v52 z"/>
+    <path d="M364 700 v-52 a20 20 0 0 1 40 0 v52 z"/>
+    <path d="M444 700 v-52 a20 20 0 0 1 40 0 v52 z"/>
+    <path d="M716 700 v-52 a20 20 0 0 1 40 0 v52 z"/>
+    <path d="M796 700 v-52 a20 20 0 0 1 40 0 v52 z"/>
+    <path d="M876 700 v-52 a20 20 0 0 1 40 0 v52 z"/>
+    <path d="M956 700 v-52 a20 20 0 0 1 40 0 v52 z"/>
+  </g>
+  <!-- upper small windows -->
+  <g fill="#7E3A35">
+    <rect x="212" y="580" width="24" height="40" rx="12"/>
+    <rect x="292" y="580" width="24" height="40" rx="12"/>
+    <rect x="372" y="580" width="24" height="40" rx="12"/>
+    <rect x="452" y="580" width="24" height="40" rx="12"/>
+    <rect x="724" y="580" width="24" height="40" rx="12"/>
+    <rect x="804" y="580" width="24" height="40" rx="12"/>
+    <rect x="884" y="580" width="24" height="40" rx="12"/>
+    <rect x="964" y="580" width="24" height="40" rx="12"/>
+  </g>
+
+  <!-- central tower -->
+  <rect x="520" y="300" width="160" height="470" fill="#B5504A"/>
+  <rect x="520" y="300" width="160" height="16" fill="#F3E9DC"/>
+  <rect x="520" y="470" width="160" height="10" fill="#F3E9DC"/>
+  <rect x="520" y="640" width="160" height="10" fill="#F3E9DC"/>
+  <rect x="536" y="286" width="128" height="14" fill="#F3E9DC"/>
+  <circle cx="600" cy="380" r="46" fill="#FFFFFF" stroke="#7E2E2A" stroke-width="7"/>
+  <g stroke="#7E2E2A" stroke-width="4" stroke-linecap="round">
+    <line x1="600" y1="340" x2="600" y2="352"/>
+    <line x1="600" y1="408" x2="600" y2="420"/>
+    <line x1="560" y1="380" x2="572" y2="380"/>
+    <line x1="628" y1="380" x2="640" y2="380"/>
+  </g>
+  <line x1="600" y1="380" x2="600" y2="350" stroke="#2E2E2E" stroke-width="5" stroke-linecap="round"/>
+  <line x1="600" y1="380" x2="622" y2="392" stroke="#2E2E2E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M572 560 v-30 a14 14 0 0 1 28 0 v30 z" fill="#6E2A26"/>
+  <path d="M628 560 v-30 a14 14 0 0 1 -28 0" fill="none"/>
+  <polygon points="500,300 700,300 600,196" fill="#8E3B36"/>
+  <line x1="600" y1="196" x2="600" y2="150" stroke="#7E2E2A" stroke-width="6"/>
+  <circle cx="600" cy="144" r="9" fill="#F2C14E"/>
+
+  <!-- entrance arch -->
+  <path d="M560 770 v-116 a40 40 0 0 1 80 0 v116 z" fill="#5E2320" stroke="#F3E9DC" stroke-width="6"/>
+
+  <!-- plaza -->
+  <rect x="0" y="770" width="1200" height="130" fill="url(#cplaza)"/>
+  <rect x="0" y="830" width="1200" height="26" fill="#A9A290"/>
+  <g stroke="#4A5A6E" stroke-width="6" stroke-linecap="round">
+    <line x1="320" y1="828" x2="320" y2="760"/>
+    <line x1="880" y1="828" x2="880" y2="760"/>
+  </g>
+  <circle cx="320" cy="752" r="10" fill="#FFE9A8"/>
+  <circle cx="880" cy="752" r="10" fill="#FFE9A8"/>
+
+  <!-- shrubs -->
+  <g fill="#5FA97C">
+    <ellipse cx="120" cy="778" rx="34" ry="16"/>
+    <ellipse cx="1080" cy="778" rx="34" ry="16"/>
+    <ellipse cx="220" cy="784" rx="26" ry="12"/>
+    <ellipse cx="980" cy="784" rx="26" ry="12"/>
+  </g>
+</svg>

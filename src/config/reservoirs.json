@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "Chennai Metropolitan Water Supply and Sewerage Board (CMWSSB) combined storage. Capacities are public figures in TMC ft; coordinates are lake centroids (WGS 84) for map display.",
+  "notes": "Reservoir rows live ONLY here — the seed hydrates the DB from this file via src/lib/reservoirs.ts. Readings are entered manually in /admin (ReservoirReading rows).",
+  "reservoirs": [
+    { "key": "poondi", "name": "Poondi (Sathyamoorthy Sagar)", "capacityTmcft": 3.231, "latitude": 13.186, "longitude": 79.861 },
+    { "key": "cholavaram", "name": "Cholavaram", "capacityTmcft": 1.081, "latitude": 13.234, "longitude": 80.159 },
+    { "key": "redhills", "name": "Red Hills (Puzhal)", "capacityTmcft": 3.3, "latitude": 13.17, "longitude": 80.198 },
+    { "key": "chembarambakkam", "name": "Chembarambakkam", "capacityTmcft": 3.645, "latitude": 13.013, "longitude": 80.061 },
+    { "key": "veeranam", "name": "Veeranam", "capacityTmcft": 1.465, "latitude": 11.331, "longitude": 79.549 }
+  ]
+}

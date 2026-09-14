@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 210" role="img" aria-label="Madras M logo">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- black paint outline -->
+    <path d="M36 168 L30 44 L98 122 L148 34 L158 168" stroke="#101010" stroke-width="46"/>
+    <!-- drip outlines -->
+    <path d="M33 178 L29 196" stroke="#101010" stroke-width="20"/>
+    <path d="M94 148 L91 168" stroke="#101010" stroke-width="16"/>
+    <!-- blue paint body -->
+    <path d="M36 168 L30 44 L98 122 L148 34 L158 168" stroke="#2B5FE6" stroke-width="32"/>
+    <!-- drip bodies -->
+    <path d="M33 178 L29 196" stroke="#2B5FE6" stroke-width="11"/>
+    <path d="M94 148 L91 168" stroke="#2B5FE6" stroke-width="8"/>
+  </g>
+</svg>

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Madras wordmark with Chennai skyline">
+  <defs>
+    <linearGradient id="wsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6FCBEF"/>
+      <stop offset="0.45" stop-color="#BEEBFB"/>
+      <stop offset="1" stop-color="#EAF8FD"/>
+    </linearGradient>
+    <linearGradient id="wsea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2FA9D6"/>
+      <stop offset="1" stop-color="#1478F2"/>
+    </linearGradient>
+    <linearGradient id="wsand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6E3B8"/>
+      <stop offset="1" stop-color="#EFD194"/>
+    </linearGradient>
+    <clipPath id="wTowerClip">
+      <path d="M676 620 L704 620 L720 940 L660 940 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="900" height="1200" fill="url(#wsky)"/>
+
+  <!-- wordmark -->
+  <text x="450" y="212" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="104" font-weight="800" letter-spacing="12" fill="#FFFFFF">MADRAS</text>
+  <text x="450" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" letter-spacing="9" fill="#E4F7FF">WEATHER INTELLIGENCE</text>
+
+  <!-- sun -->
+  <circle cx="450" cy="470" r="140" fill="#FFE9A8" opacity="0.5"/>
+  <circle cx="450" cy="470" r="84" fill="#FFD866"/>
+
+  <!-- clouds -->
+  <g fill="#FFFFFF" opacity="0.92">
+    <ellipse cx="216" cy="330" rx="44" ry="18"/>
+    <ellipse cx="254" cy="320" rx="32" ry="15"/>
+    <ellipse cx="664" cy="306" rx="42" ry="17"/>
+    <ellipse cx="702" cy="296" rx="30" ry="14"/>
+  </g>
+
+  <!-- birds -->
+  <g stroke="#47617E" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M320 470 q10 -12 20 0 q10 -12 20 0"/>
+    <path d="M560 500 q9 -11 18 0 q9 -11 18 0"/>
+  </g>
+
+  <!-- skyline -->
+  <g fill="#9ED2EA" opacity="0.85">
+    <rect x="60" y="660" width="60" height="100"/>
+    <rect x="140" y="640" width="44" height="120"/>
+    <rect x="200" y="676" width="70" height="84"/>
+    <rect x="290" y="652" width="50" height="108"/>
+    <rect x="360" y="672" width="64" height="88"/>
+    <rect x="445" y="648" width="46" height="112"/>
+    <rect x="510" y="670" width="72" height="90"/>
+    <rect x="600" y="655" width="44" height="105"/>
+    <rect x="660" y="676" width="66" height="84"/>
+    <rect x="745" y="660" width="52" height="100"/>
+    <rect x="815" y="680" width="60" height="80"/>
+  </g>
+
+  <!-- sea -->
+  <rect x="0" y="756" width="900" height="166" fill="url(#wsea)"/>
+  <rect x="0" y="754" width="900" height="3" fill="#FFFFFF" opacity="0.5"/>
+  <g stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.45">
+    <path d="M30 800 q36 -14 72 0 t72 0 t72 0 t72 0 t72 0 t72 0 t72 0 t72 0 t72 0 t72 0 t72 0 t72 0"/>
+    <path d="M0 838 q42 -12 84 0 t84 0 t84 0 t84 0 t84 0 t84 0 t84 0 t84 0 t84 0 t84 0 t84 0"/>
+  </g>
+
+  <!-- boat -->
+  <g>
+    <line x1="292" y1="762" x2="292" y2="806" stroke="#14476E" stroke-width="4"/>
+    <polygon points="296,762 296,800 332,800" fill="#FFFFFF"/>
+    <path d="M266 806 L322 806 L312 824 L276 824 Z" fill="#14476E"/>
+  </g>
+
+  <!-- beach -->
+  <rect x="0" y="920" width="900" height="280" fill="url(#wsand)"/>
+  <path d="M0 920 L900 920 L900 942 Q600 958 300 948 T0 944 Z" fill="#E4C48E" opacity="0.8"/>
+  <path d="M0 922 q56 -10 112 0 t112 0 t112 0 t112 0 t112 0 t112 0 t112 0 t112 0" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- lighthouse -->
+  <polygon points="690,600 520,522 520,586" fill="#FFF7D6" opacity="0.5"/>
+  <g>
+    <path d="M676 620 L704 620 L720 940 L660 940 Z" fill="#FFFFFF"/>
+    <g clip-path="url(#wTowerClip)">
+      <rect x="640" y="620" width="100" height="45" fill="#F0532F"/>
+      <rect x="640" y="710" width="100" height="45" fill="#F0532F"/>
+      <rect x="640" y="800" width="100" height="45" fill="#F0532F"/>
+      <rect x="640" y="890" width="100" height="50" fill="#F0532F"/>
+    </g>
+    <rect x="662" y="604" width="56" height="14" rx="6" fill="#14506B"/>
+    <rect x="672" y="574" width="36" height="32" rx="4" fill="#DFF4FF" stroke="#14506B" stroke-width="4"/>
+    <path d="M668 574 Q690 548 712 574 Z" fill="#F0532F"/>
+    <line x1="690" y1="550" x2="690" y2="536" stroke="#14506B" stroke-width="4"/>
+    <circle cx="690" cy="532" r="6" fill="#14506B"/>
+    <rect x="680" y="892" width="24" height="48" rx="12" fill="#14506B"/>
+    <rect x="646" y="936" width="88" height="18" rx="8" fill="#D9B87E"/>
+    <ellipse cx="690" cy="962" rx="80" ry="11" fill="#C9A96C" opacity="0.45"/>
+  </g>
+
+  <!-- palm -->
+  <g>
+    <path d="M180 1150 C200 1060 190 1000 214 930" stroke="#8A5A2B" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <g stroke="#14996B" stroke-width="10" fill="none" stroke-linecap="round">
+      <path d="M214 928 q-56 -28 -104 -8"/>
+      <path d="M214 928 q-44 -48 -92 -54"/>
+      <path d="M214 928 q6 -54 52 -70"/>
+      <path d="M214 928 q58 -24 100 6"/>
+      <path d="M214 928 q48 8 80 44"/>
+      <path d="M214 928 q-16 38 -54 50"/>
+    </g>
+    <circle cx="208" cy="936" r="8" fill="#6B4A22"/>
+    <circle cx="222" cy="938" r="8" fill="#6B4A22"/>
+    <ellipse cx="196" cy="1158" rx="66" ry="10" fill="#C9A96C" opacity="0.4"/>
+  </g>
+
+  <!-- umbrella -->
+  <g>
+    <line x1="430" y1="1078" x2="430" y2="1160" stroke="#4A5A6E" stroke-width="6"/>
+    <path d="M356 1080 Q430 996 504 1080 Z" fill="#FF6B5B"/>
+    <path d="M393 1080 Q430 1036 430 1080 Z" fill="#FFFFFF" opacity="0.85"/>
+    <ellipse cx="432" cy="1166" rx="56" ry="9" fill="#C9A96C" opacity="0.4"/>
+  </g>
+
+  <!-- foam dots -->
+  <g fill="#FFFFFF" opacity="0.7">
+    <circle cx="700" cy="930" r="5"/>
+    <circle cx="726" cy="934" r="4"/>
+    <circle cx="748" cy="929" r="3"/>
+  </g>
+</svg>

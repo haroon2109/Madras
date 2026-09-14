@@ -1,0 +1,1003 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   MADRAS DESIGN SYSTEM — "Quiet Machine" + Motion Layer
+   Enterprise-minimal surfaces with an Apple-grade physics motion system.
+   --------------------------------------------------------------------------
+   Canvas        #FFFFFF
+   Containers    #F8F9FA (cards) · #F1F3F4 (hover wells)
+   Ink           #202124 (primary) · #5F6368 (secondary) · #80868B (tertiary)
+   Hairlines     #DADCE0
+   Accent        #1A73E8 (Google blue) with duotone #E8F0FE fills
+   Motion        200ms micro-interactions; spring(1, bouncy) for entrances,
+                 drawers and layout morphs. Transform/opacity only at 60fps.
+   Elevation     ambient: 0 4px 24px rgba(0,0,0,0.06)
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F8F9FA;
+  --color-bg-tertiary: #F1F3F4;
+  --color-bg-elevated: #FFFFFF;
+
+  --color-surface-glass: rgba(255, 255, 255, 0.78);
+  --color-surface-glass-hover: rgba(248, 249, 250, 0.9);
+  --color-border-subtle: #EDF0F2;
+  --color-border-default: #DADCE0;
+  --color-border-strong: #BDC1C6;
+
+  /* Text hierarchy — obsidian core */
+  --color-text-primary: #202124;
+  --color-text-secondary: #5F6368;
+  --color-text-tertiary: #80868B;
+  --color-text-disabled: #BDC1C6;
+
+  /* Accents — duotone system: solid + 8–12% tint */
+  --color-accent-blue: #1A73E8;
+  --color-accent-blue-hover: #1765CC;
+  --color-accent-blue-tint: #E8F0FE;
+  --color-accent-blue-glow: rgba(26, 115, 232, 0.16);
+  --color-accent-teal: #129EAF;
+  --color-accent-teal-tint: #E4F7FB;
+  --color-accent-teal-glow: rgba(18, 158, 175, 0.16);
+  --color-accent-amber: #E37400;
+  --color-accent-amber-tint: #FEF7E0;
+  --color-accent-amber-glow: rgba(227, 116, 0, 0.16);
+  --color-accent-red: #D93025;
+  --color-accent-red-tint: #FCE8E6;
+  --color-accent-red-glow: rgba(217, 48, 37, 0.16);
+  --color-accent-green: #188038;
+  --color-accent-green-tint: #E6F4EA;
+  --color-accent-green-glow: rgba(24, 128, 56, 0.16);
+  --color-accent-purple: #7B1FA2;
+  --color-accent-purple-tint: #F3E8FD;
+
+  /* Gradients (kept for compat; near-flat) */
+  --color-gradient-hero: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+  --color-gradient-card: #FFFFFF;
+  --color-gradient-accent: linear-gradient(135deg, #1A73E8 0%, #129EAF 100%);
+
+  /* Typography Scale */
+  --font-display: 48px;
+  --font-h1: 36px;
+  --font-h2: 28px;
+  --font-h3: 22px;
+  --font-body: 16px;
+  --font-small: 14px;
+  --font-micro: 12px;
+  --font-tabular: 14px;
+
+  /* Spacing Rhythm */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Border Radius — continuous-curve feel */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-full: 9999px;
+
+  /* Elevation — soft ambient shadows, one key light */
+  --shadow-ambient: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.09);
+  --shadow-xl: 0 16px 56px rgba(0, 0, 0, 0.12);
+  --shadow-lifted: 0 12px 40px rgba(0, 0, 0, 0.10), 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-glow-teal: 0 0 20px var(--color-accent-teal-glow);
+  --shadow-glow-blue: 0 0 20px var(--color-accent-blue-glow);
+
+  /* ==========================================================================
+     MOTION TOKENS — spring physics with graceful bezier fallback
+     ========================================================================== */
+
+  /* Durations */
+  --motion-fast: 120ms;
+  --motion-base: 200ms;
+  --motion-slow: 320ms;
+  --motion-spring: 480ms;
+  --motion-entry: 560ms;
+
+  /* Easing — Material decelerate for micro-interactions */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Fallback spring: overshooting bezier (widely supported) */
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.44, 1);
+  --ease-spring-soft: cubic-bezier(0.3, 1.06, 0.4, 1);
+
+  /* Compat durations (legacy utility names) */
+  --transition-fast: var(--motion-base) var(--ease-out);
+  --transition-base: var(--motion-base) var(--ease-out);
+  --transition-slow: var(--motion-slow) var(--ease-out);
+  --transition-spring: var(--motion-spring) var(--ease-spring);
+
+  /* Z-index Scale */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}
+
+/* True spring curves via linear() — Chromium 113+, Safari 17.2+, FF 112+.
+   Browsers without linear() keep the bezier fallbacks above. */
+@supports (animation-timing-function: linear(0, 1)) {
+  :root {
+    /* Gentle spring — entries, drawers, layout morphs (slight settle) */
+    --ease-spring-soft: linear(
+      0, 0.0064 1.1%, 0.026 2.2%, 0.0992 4.7%, 0.2108 7.1%,
+      0.4521 11.4%, 0.8021 15.6%, 0.9863 19.3%, 1.0692 21.9%,
+      1.1144 24.6%, 1.1266 27.3%, 1.1156 30.2%, 1.0478 38.4%,
+      1.0003 46.5%, 0.9844 51.4%, 0.9822 56.6%, 0.9968 68.6%,
+      1.0031 81.1%, 1.0001 100%
+    );
+    /* Bouncier spring — pop-ins, icons, badges (two decaying overshoots) */
+    --ease-spring: linear(
+      0, 0.0086 0.33%, 0.0341 0.68%, 0.141 2.1%, 0.723 12.9%,
+      0.938 16.7%, 1.017, 1.077 20.4%, 1.121, 1.149 24.3%,
+      1.159, 1.163 27%, 1.161, 1.154 29.9%, 1.129 32.8%,
+      1.051 39.6%, 1.017 43.1%, 0.991, 0.977 51%, 0.974 53.8%,
+      0.975 57.1%, 0.997 69.8%, 1.003 76.9%, 1.004 83.8%, 1
+    );
+  }
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+/* Base element styles live in @layer base so Tailwind utilities (also
+   unlayered utilities layer) and arbitrary-value classes like text-[13px]
+   can always override them. Previously these rules were unlayered, which
+   put them ABOVE every layer in the cascade — so h1/h2/h3 font sizes,
+   paragraph colors and link colors silently overrode component utility
+   classes and broke typography sizing across the app. */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+  }
+
+  h1 { font-size: var(--font-h1); }
+  h2 { font-size: var(--font-h2); }
+  h3 { font-size: var(--font-h3); }
+
+  p {
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+  }
+
+  a {
+    color: var(--color-accent-blue);
+    text-decoration: none;
+    transition: color var(--motion-base) var(--ease-out);
+  }
+
+  a:hover {
+    color: var(--color-accent-blue-hover);
+  }
+
+  /* Focus — 2px high-contrast ring, spring-settled */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-blue);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection {
+    background: var(--color-accent-blue-tint);
+    color: var(--color-text-primary);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-default);
+    border-radius: var(--radius-full);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-strong);
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+::selection {
+  background: var(--color-accent-blue-tint);
+  color: var(--color-text-primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-default);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-strong);
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   DEPTH PRIMITIVES — hover elevation, active compression
+   Compositor-only: transform + box-shadow. 60fps guaranteed.
+   ========================================================================== */
+
+@layer utilities {
+  /* Hover lift + active depth compression (scale 0.97) */
+  .lift {
+    transition:
+      transform var(--motion-base) var(--ease-out),
+      box-shadow var(--motion-base) var(--ease-out),
+      border-color var(--motion-base) var(--ease-out),
+      background-color var(--motion-base) var(--ease-out);
+    will-change: transform;
+  }
+
+  .lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lifted);
+  }
+
+  .lift:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: var(--shadow-sm);
+    transition-duration: var(--motion-fast);
+  }
+
+  /* Pressable — compression only, no lift (chips, pills, icon buttons) */
+  .pressable {
+    transition: transform var(--motion-fast) var(--ease-out);
+  }
+
+  .pressable:hover {
+    transform: translateY(-1px);
+  }
+
+  .pressable:active {
+    transform: scale(0.97);
+  }
+
+  /* Tactile tap feedback on touch */
+  @media (hover: none) {
+    .lift:active { transform: scale(0.98); }
+  }
+}
+
+/* ==========================================================================
+   SURFACE UTILITIES — glass at blur(8px)
+   ========================================================================== */
+
+@layer utilities {
+  .glass {
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  .glass-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-ambient);
+    transition: box-shadow var(--motion-base) var(--ease-out), transform var(--motion-base) var(--ease-out), border-color var(--motion-base) var(--ease-out);
+  }
+
+  .glass-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .glass-card-interactive:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-border-strong);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Bento cell — the core layout primitive; morphs with spring FLIP */
+  .bento-cell {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-ambient);
+    transition: box-shadow var(--motion-base) var(--ease-out), transform var(--motion-base) var(--ease-out), border-color var(--motion-base) var(--ease-out);
+  }
+
+  .bento-cell--white {
+    background: var(--color-bg-elevated);
+  }
+
+  .bento-cell--interactive:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-border-default);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
+  }
+
+  .bento-cell--interactive:active {
+    transform: translateY(0) scale(0.97);
+    transition-duration: var(--motion-fast);
+  }
+
+  /* FLIP morph: JS sets --flip-x/--flip-y/--flip-s; class animates to identity */
+  .bento-morphing {
+    transition: transform var(--motion-spring) var(--ease-spring-soft);
+    will-change: transform;
+  }
+}
+
+/* ==========================================================================
+   AMBIENT MESH FIELD — restrained interactive gradient background
+   Blobs are transform-only; JS drives parallax via refs (no re-renders).
+   ========================================================================== */
+
+.mesh-field {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.mesh-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(72px);
+  opacity: 0.055;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ==========================================================================
+   REACTIVE ILLUSTRATIONS — organic response to focus/proximity
+   ========================================================================== */
+
+.reactive-art {
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1);
+  transition: transform var(--motion-spring) var(--ease-spring-soft);
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.reactive-art--engaged {
+  transition: transform 120ms linear; /* direct drive while pointer moves */
+}
+
+.reactive-art--resting {
+  animation: breathe 7s ease-in-out infinite;
+}
+
+.reactive-art__pop {
+  transition: transform var(--motion-spring) var(--ease-spring);
+}
+
+.group:hover .reactive-art__pop,
+.reactive-art--engaged .reactive-art__pop {
+  transform: scale(1.04);
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -4px, 0); }
+}
+
+/* ==========================================================================
+   DRAWER — spring-driven panels (mobile nav)
+   ========================================================================== */
+
+.drawer-overlay {
+  transition: opacity var(--motion-base) var(--ease-out);
+}
+
+.drawer-panel {
+  transition: transform var(--motion-spring) var(--ease-spring-soft);
+  will-change: transform;
+}
+
+/* Off-canvas ONLY on mobile. At lg+ the sidebar is a static sticky column, so
+   translate must resolve to none — otherwise the "always visible" desktop
+   sidebar sits shifted off-screen with no hamburger to recall it. Uses the
+   transform function list (not `translate: none`) so it also overrides any
+   Tailwind translate property that may be present. */
+.drawer-panel--closed {
+  transform: translate3d(-100%, 0, 0);
+}
+
+@media (min-width: 1024px) {
+  .drawer-panel--closed {
+    transform: none;
+  }
+}
+
+.drawer-panel--open {
+  transform: translate3d(0, 0, 0);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY UTILITIES
+   ========================================================================== */
+
+@layer utilities {
+  .text-display {
+    font-size: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+  }
+
+  .text-gradient {
+    background: var(--color-gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tracking-tight {
+    letter-spacing: -0.01em;
+  }
+
+  .tracking-extra-tight {
+    letter-spacing: -0.025em;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ==========================================================================
+   ENTRY ANIMATIONS — 15px upward fade-ins, spring-settled, fill: both
+   ========================================================================== */
+
+@layer utilities {
+  .animate-fade-in,
+  .animate-in {
+    animation: fadeIn var(--motion-slow) var(--ease-out) both;
+  }
+
+  /* Primary entry: 15px rise + fade on a soft spring */
+  .animate-rise {
+    animation: rise var(--motion-entry) var(--ease-spring-soft) both;
+  }
+
+  /* Legacy names kept working */
+  .animate-slide-up,
+  .animate-rise-up {
+    animation: rise var(--motion-entry) var(--ease-spring-soft) both;
+  }
+
+  .animate-slide-down {
+    animation: slideDown var(--motion-slow) var(--ease-out) both;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn var(--motion-spring) var(--ease-spring) both;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2.4s ease-in-out infinite;
+  }
+
+  .animate-count-up {
+    animation: countUp 0.7s var(--ease-out) both;
+  }
+
+  /* Skeleton-to-content shimmer dissolve */
+  .animate-content-in {
+    animation: contentIn var(--motion-slow) var(--ease-out) both;
+  }
+
+  .skeleton-dissolve {
+    animation: dissolveOut 280ms var(--ease-out) forwards;
+    pointer-events: none;
+  }
+
+  /* Stagger groups: direct children rise in sequence */
+  .stagger-group > * {
+    animation: rise var(--motion-entry) var(--ease-spring-soft) both;
+  }
+  .stagger-group > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-group > *:nth-child(2) { animation-delay: 50ms; }
+  .stagger-group > *:nth-child(3) { animation-delay: 100ms; }
+  .stagger-group > *:nth-child(4) { animation-delay: 150ms; }
+  .stagger-group > *:nth-child(5) { animation-delay: 200ms; }
+  .stagger-group > *:nth-child(6) { animation-delay: 250ms; }
+  .stagger-group > *:nth-child(7) { animation-delay: 300ms; }
+  .stagger-group > *:nth-child(8) { animation-delay: 350ms; }
+  .stagger-group > *:nth-child(9) { animation-delay: 400ms; }
+  .stagger-group > *:nth-child(10) { animation-delay: 450ms; }
+  .stagger-group > *:nth-child(11) { animation-delay: 500ms; }
+  .stagger-group > *:nth-child(12) { animation-delay: 550ms; }
+
+  .stagger-1 { animation-delay: 40ms; }
+  .stagger-2 { animation-delay: 80ms; }
+  .stagger-3 { animation-delay: 120ms; }
+  .stagger-4 { animation-delay: 160ms; }
+  .stagger-5 { animation-delay: 200ms; }
+  .stagger-6 { animation-delay: 240ms; }
+  .stagger-7 { animation-delay: 280ms; }
+  .stagger-8 { animation-delay: 320ms; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* 15px upward fade-in */
+  @keyframes rise {
+    from { opacity: 0; transform: translate3d(0, 15px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translate3d(0, -8px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+
+  @keyframes countUp {
+    from { opacity: 0; transform: translate3d(0, 8px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+
+  /* Skeleton → content: blur-dissolve swap */
+  @keyframes contentIn {
+    from { opacity: 0; filter: blur(4px); transform: translate3d(0, 4px, 0); }
+    to { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0); }
+  }
+
+  @keyframes dissolveOut {
+    to { opacity: 0; filter: blur(6px); transform: scale(0.99); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, var(--color-bg-tertiary) 0%, var(--color-bg-secondary) 50%, var(--color-bg-tertiary) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s linear infinite;
+  }
+
+  /* Hero panels (dashboard / settings / decisions) — soft rise + fade */
+  .animate-hero-in {
+    animation: rise var(--motion-entry) var(--ease-spring-soft) both;
+  }
+
+  /* Auth card entrance — spring pop-in */
+  .animate-card-in {
+    animation: scaleIn var(--motion-spring) var(--ease-spring) both;
+  }
+
+  /* Auth brand logo entrance */
+  .animate-logo-enter {
+    animation: scaleIn var(--motion-spring) var(--ease-spring) both;
+    animation-delay: 60ms;
+  }
+
+  /* Login illustration ambience — drifting clouds and floating birds */
+  .animate-cloud-drift {
+    animation: cloudDrift 26s ease-in-out infinite alternate;
+  }
+
+  .animate-cloud-drift-fast {
+    animation: cloudDrift 16s ease-in-out infinite alternate;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes cloudDrift {
+    from { transform: translate3d(-18px, 0, 0); }
+    to { transform: translate3d(18px, 0, 0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -6px, 0); }
+  }
+}
+
+/* ==========================================================================
+   SKELETON
+   ========================================================================== */
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-bg-tertiary) 0%, var(--color-bg-secondary) 50%, var(--color-bg-tertiary) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+  border-radius: var(--radius-md);
+}
+
+.skeleton-text { height: 14px; margin-bottom: 8px; }
+.skeleton-text:last-child { width: 60%; }
+.skeleton-heading { height: 24px; width: 40%; margin-bottom: 12px; }
+.skeleton-avatar { width: 40px; height: 40px; border-radius: var(--radius-full); }
+.skeleton-card { height: 120px; border-radius: var(--radius-lg); }
+
+/* ==========================================================================
+   RESPONSIVE TYPE
+   ========================================================================== */
+
+@layer base {
+  @media (max-width: 374px) {
+    :root { font-size: 15px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+  }
+
+  @media (min-width: 1280px) {
+    :root { font-size: 16.5px; }
+  }
+}
+
+/* Reduced motion: everything lands instantly in its final state */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .mesh-field { display: none; }
+  .reactive-art--resting { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ==========================================================================
+   COMPONENT PRIMITIVES — @layer components so Tailwind utilities can
+   override any property on an element that also carries a .btn/.card/etc.
+   class (unlayered rules would always win the cascade).
+   ========================================================================== */
+
+@layer components {
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 10px var(--space-5);
+  font-size: var(--font-small);
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition:
+    transform var(--motion-base) var(--ease-out),
+    background-color var(--motion-base) var(--ease-out),
+    box-shadow var(--motion-base) var(--ease-out);
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: var(--motion-fast);
+}
+
+.btn-primary {
+  color: #FFFFFF;
+  background: var(--color-accent-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-blue-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-default);
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-ghost {
+  color: var(--color-text-secondary);
+  background: transparent;
+  padding: var(--space-2) var(--space-3);
+}
+
+.btn-ghost:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-tertiary);
+  transform: none;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+.btn-lg {
+  padding: 14px var(--space-6);
+  font-size: var(--font-body);
+}
+
+.btn-sm {
+  padding: 6px var(--space-3);
+  font-size: var(--font-micro);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-ambient);
+  transition: all var(--motion-base) var(--ease-out);
+}
+
+.card-interactive { cursor: pointer; }
+
+.card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: var(--font-micro);
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-tertiary);
+  border: 1px solid transparent;
+  color: var(--color-text-secondary);
+}
+
+.badge-blue  { background: var(--color-accent-blue-tint);  color: var(--color-accent-blue); }
+.badge-teal  { background: var(--color-accent-teal-tint);  color: var(--color-accent-teal); }
+.badge-amber { background: var(--color-accent-amber-tint); color: var(--color-accent-amber); }
+.badge-red   { background: var(--color-accent-red-tint);   color: var(--color-accent-red); }
+.badge-green { background: var(--color-accent-green-tint); color: var(--color-accent-green); }
+
+.input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  transition: border-color var(--motion-base) var(--ease-out), box-shadow var(--motion-base) var(--ease-out);
+}
+
+.input::placeholder { color: var(--color-text-tertiary); }
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent-blue);
+  box-shadow: 0 0 0 1px var(--color-accent-blue);
+}
+
+.input:hover:not(:focus) {
+  border-color: var(--color-border-strong);
+}
+
+.tab {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--motion-base) var(--ease-out);
+}
+
+.tab:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-tertiary);
+}
+
+.tab.active {
+  color: var(--color-accent-blue);
+  background: var(--color-accent-blue-tint);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px var(--space-4);
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-full);
+  transition: all var(--motion-base) var(--ease-out);
+  position: relative;
+}
+
+.nav-item:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-tertiary);
+}
+
+.nav-item:active {
+  transform: scale(0.97);
+}
+
+.nav-item.active {
+  color: var(--color-accent-blue);
+  background: var(--color-accent-blue-tint);
+  font-weight: 600;
+}
+
+/* Status dots */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.status-dot-live {
+  background: var(--color-accent-green);
+  animation: pulseSoft 2.4s ease-in-out infinite;
+}
+
+.status-dot-warning { background: var(--color-accent-amber); }
+
+.status-dot-critical {
+  background: var(--color-accent-red);
+  animation: pulseSoft 1.2s ease-in-out infinite;
+}
+
+.status-dot-offline { background: var(--color-text-tertiary); }
+
+.divider {
+  height: 1px;
+  background: var(--color-border-subtle);
+  margin: var(--space-4) 0;
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 24px;
+  background: var(--color-border-subtle);
+  align-self: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-blue-tint);
+  color: var(--color-accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--font-small);
+  overflow: hidden;
+}
+
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-sm { width: 32px; height: 32px; font-size: var(--font-micro); }
+.avatar-lg { width: 56px; height: 56px; font-size: var(--font-body); }
+.avatar-xl { width: 80px; height: 80px; font-size: var(--font-h3); }
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+@media (min-width: 768px) { .container { padding: 0 var(--space-6); } }
+@media (min-width: 1024px) { .container { padding: 0 var(--space-8); } }
+
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-5);
+}
+
+} /* end @layer components */

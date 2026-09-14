@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Marina Beach Chennai with lighthouse">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ADCF5"/>
+      <stop offset="0.55" stop-color="#C9EEFB"/>
+      <stop offset="1" stop-color="#EAF8FD"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2FA9D6"/>
+      <stop offset="1" stop-color="#1478F2"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6E3B8"/>
+      <stop offset="1" stop-color="#EFD194"/>
+    </linearGradient>
+    <clipPath id="towerClip">
+      <path d="M186 300 L224 300 L242 730 L168 730 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#sky)"/>
+
+  <circle cx="960" cy="190" r="105" fill="#FFE9A8" opacity="0.5"/>
+  <circle cx="960" cy="190" r="62" fill="#FFD866"/>
+
+  <g fill="#FFFFFF" opacity="0.92">
+    <ellipse cx="260" cy="152" rx="58" ry="24"/>
+    <ellipse cx="312" cy="140" rx="46" ry="22"/>
+    <ellipse cx="204" cy="142" rx="34" ry="17"/>
+    <ellipse cx="700" cy="108" rx="48" ry="20"/>
+    <ellipse cx="742" cy="98" rx="34" ry="16"/>
+    <ellipse cx="1062" cy="300" rx="36" ry="14" opacity="0.8"/>
+  </g>
+
+  <g stroke="#47617E" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M300 232 q10 -12 20 0 q10 -12 20 0"/>
+    <path d="M362 206 q9 -11 18 0 q9 -11 18 0"/>
+    <path d="M424 244 q8 -10 16 0 q8 -10 16 0"/>
+  </g>
+
+  <g fill="#A9D8EC" opacity="0.75">
+    <rect x="70" y="505" width="46" height="80"/>
+    <rect x="130" y="480" width="34" height="105"/>
+    <rect x="240" y="455" width="26" height="130"/>
+    <rect x="185" y="520" width="58" height="65"/>
+    <rect x="300" y="495" width="40" height="90"/>
+    <rect x="360" y="515" width="70" height="70"/>
+    <rect x="455" y="485" width="30" height="100"/>
+    <rect x="505" y="505" width="52" height="80"/>
+    <rect x="620" y="492" width="38" height="93"/>
+    <rect x="675" y="515" width="64" height="70"/>
+    <rect x="760" y="500" width="42" height="85"/>
+    <rect x="820" y="522" width="56" height="63"/>
+    <rect x="905" y="495" width="36" height="90"/>
+    <rect x="955" y="512" width="60" height="73"/>
+    <rect x="1040" y="502" width="40" height="83"/>
+    <rect x="1095" y="518" width="52" height="67"/>
+  </g>
+  <line x1="253" y1="455" x2="253" y2="425" stroke="#A9D8EC" stroke-width="5"/>
+  <line x1="472" y1="485" x2="472" y2="462" stroke="#A9D8EC" stroke-width="4"/>
+
+  <rect x="0" y="580" width="1200" height="135" fill="url(#sea)"/>
+  <rect x="0" y="578" width="1200" height="3" fill="#FFFFFF" opacity="0.5"/>
+  <g stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.45">
+    <path d="M40 630 q40 -16 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+    <path d="M0 662 q45 -14 90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0"/>
+    <path d="M120 694 q50 -14 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/>
+  </g>
+
+  <g>
+    <line x1="833" y1="560" x2="833" y2="612" stroke="#14476E" stroke-width="4"/>
+    <polygon points="838,560 838,606 882,606" fill="#FFFFFF"/>
+    <polygon points="828,568 828,606 798,606" fill="#E8F6FB"/>
+    <path d="M800 612 L870 612 L858 634 L812 634 Z" fill="#14476E"/>
+    <polygon points="833,560 848,568 833,574" fill="#F0532F"/>
+  </g>
+
+  <rect x="0" y="712" width="1200" height="188" fill="url(#sand)"/>
+  <path d="M0 712 L1200 712 L1200 736 Q900 754 600 742 T0 738 Z" fill="#E4C48E" opacity="0.8"/>
+  <path d="M0 714 q60 -10 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+
+  <polygon points="207,262 452,158 452,242" fill="#FFF7D6" opacity="0.5"/>
+
+  <g>
+    <path d="M186 300 L224 300 L242 730 L168 730 Z" fill="#FFFFFF"/>
+    <g clip-path="url(#towerClip)">
+      <rect x="150" y="300" width="110" height="43" fill="#F0532F"/>
+      <rect x="150" y="386" width="110" height="43" fill="#F0532F"/>
+      <rect x="150" y="472" width="110" height="43" fill="#F0532F"/>
+      <rect x="150" y="558" width="110" height="43" fill="#F0532F"/>
+      <rect x="150" y="644" width="110" height="43" fill="#F0532F"/>
+    </g>
+    <rect x="174" y="282" width="62" height="16" rx="6" fill="#14506B"/>
+    <g stroke="#14506B" stroke-width="3">
+      <line x1="180" y1="270" x2="180" y2="282"/>
+      <line x1="194" y1="270" x2="194" y2="282"/>
+      <line x1="208" y1="270" x2="208" y2="282"/>
+      <line x1="222" y1="270" x2="222" y2="282"/>
+      <line x1="236" y1="270" x2="236" y2="282"/>
+    </g>
+    <rect x="190" y="244" width="34" height="38" rx="4" fill="#DFF4FF" stroke="#14506B" stroke-width="4"/>
+    <circle cx="207" cy="262" r="8" fill="#FFE9A8"/>
+    <path d="M184 244 Q207 214 230 244 Z" fill="#F0532F"/>
+    <line x1="207" y1="214" x2="207" y2="198" stroke="#14506B" stroke-width="4"/>
+    <circle cx="207" cy="194" r="6" fill="#14506B"/>
+    <rect x="193" y="676" width="28" height="54" rx="13" fill="#14506B"/>
+    <rect x="150" y="726" width="116" height="20" rx="8" fill="#D9B87E"/>
+    <ellipse cx="208" cy="754" rx="92" ry="12" fill="#C9A96C" opacity="0.45"/>
+  </g>
+
+  <g>
+    <path d="M430 765 C446 700 440 660 458 608" stroke="#8A5A2B" stroke-width="13" fill="none" stroke-linecap="round"/>
+    <g stroke="#14996B" stroke-width="9" fill="none" stroke-linecap="round">
+      <path d="M458 606 q-52 -26 -96 -8"/>
+      <path d="M458 606 q-40 -44 -84 -50"/>
+      <path d="M458 606 q6 -50 48 -64"/>
+      <path d="M458 606 q54 -22 92 6"/>
+      <path d="M458 606 q44 8 74 40"/>
+      <path d="M458 606 q-14 36 -50 46"/>
+    </g>
+    <circle cx="452" cy="612" r="7" fill="#6B4A22"/>
+    <circle cx="466" cy="614" r="7" fill="#6B4A22"/>
+    <ellipse cx="446" cy="772" rx="60" ry="9" fill="#C9A96C" opacity="0.4"/>
+  </g>
+
+  <g>
+    <path d="M1080 782 C1066 726 1072 694 1056 650" stroke="#8A5A2B" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <g stroke="#0F8B60" stroke-width="8" fill="none" stroke-linecap="round">
+      <path d="M1056 650 q-46 -22 -84 -6"/>
+      <path d="M1056 650 q-34 -38 -72 -42"/>
+      <path d="M1056 650 q6 -44 42 -54"/>
+      <path d="M1056 650 q48 -18 80 6"/>
+      <path d="M1056 650 q38 10 64 36"/>
+    </g>
+    <ellipse cx="1074" cy="788" rx="52" ry="8" fill="#C9A96C" opacity="0.4"/>
+  </g>
+
+  <g>
+    <line x1="640" y1="800" x2="640" y2="868" stroke="#4A5A6E" stroke-width="5"/>
+    <path d="M574 802 Q640 734 706 802 Z" fill="#FF6B5B"/>
+    <path d="M607 802 Q640 762 640 802 Z" fill="#FFFFFF" opacity="0.85"/>
+    <ellipse cx="642" cy="874" rx="52" ry="8" fill="#C9A96C" opacity="0.4"/>
+    <rect x="716" y="806" width="12" height="58" rx="6" fill="#1478F2"/>
+  </g>
+
+  <g fill="#FFFFFF" opacity="0.7">
+    <circle cx="940" cy="722" r="5"/>
+    <circle cx="968" cy="726" r="4"/>
+    <circle cx="992" cy="721" r="3"/>
+  </g>
+</svg>
