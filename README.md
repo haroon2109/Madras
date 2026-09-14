@@ -45,10 +45,6 @@ npm run db:seed        # 15 Chennai zones, 29 days of real Open-Meteo history, a
 npm run dev            # http://localhost:3000
 ```
 
-Seeded admin login: **admin@madras.local / Madras@2026**
-
-> ⚠️ Change the admin password after first login. `AUTH_SECRET` in `.env` is a dev
-> value — regenerate it (`openssl rand -base64 32`) before deploying.
 
 ### Database — PostgreSQL (Neon free tier)
 
