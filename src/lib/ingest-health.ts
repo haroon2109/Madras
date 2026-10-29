@@ -95,7 +95,7 @@ export async function getIngestHealth(): Promise<IngestHealth> {
   // filesystem signals degrade to "never" instead of crashing the page.
   let rawDir: string | null = null;
   try {
-    rawDir = resolve(process.env.INGEST_RAW_DIR ?? "data/raw");
+    rawDir = resolve(/* turbopackIgnore: true */ process.env.INGEST_RAW_DIR ?? "data/raw");
   } catch {
     rawDir = null;
   }

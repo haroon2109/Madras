@@ -47,3 +47,4 @@ next-env.d.ts
 
 # raw weather ingestion archives and logs
 /data/
+.neon
