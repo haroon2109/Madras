@@ -3,8 +3,6 @@ import Link from "next/link";
 import { CloudRain, Lock, ShieldCheck } from "lucide-react";
 import { AuthSplitLayout } from "@/components/auth/AuthSplitLayout";
 import { LoginForm } from "@/components/auth/LoginForm";
-import { AuthDivider } from "@/components/auth/AuthDivider";
-import { GoogleButton } from "@/components/auth/GoogleButton";
 
 export const metadata = {
   title: "Staff Login — Madras",
@@ -50,10 +48,6 @@ export default function LoginPage() {
       <Suspense fallback={null}>
         <LoginForm />
       </Suspense>
-
-      <AuthDivider />
-
-      <GoogleButton />
 
       <div className="mt-8 flex items-start justify-center gap-1.5 text-center text-[13px] text-[#80868B]">
         <ShieldCheck size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
