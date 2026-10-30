@@ -337,7 +337,7 @@ export default async function PublicWeatherPage() {
               className="inline-flex items-center gap-1.5 rounded-full bg-[#1A73E8] px-4 py-2 text-xs font-semibold text-white shadow-sm transition-all hover:-translate-y-px hover:bg-[#1765CC] hover:shadow-md"
             >
               <Shield size={13} aria-hidden="true" />
-              Staff sign in
+              Staff Login
             </Link>
           </div>
         </div>

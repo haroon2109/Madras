@@ -7,9 +7,9 @@ import { AuthDivider } from "@/components/auth/AuthDivider";
 import { GoogleButton } from "@/components/auth/GoogleButton";
 
 export const metadata = {
-  title: "Staff sign in — Madras",
+  title: "Staff Login — Madras",
   description:
-    "Sign in for Admin and Analyst access to the Madras operations dashboard. Public users can check their zone without an account.",
+    "Login for Admin and Analyst access to the Madras operations dashboard. Public users can check their zone without an account.",
 };
 
 export default function LoginPage() {
@@ -20,10 +20,9 @@ export default function LoginPage() {
           <Lock size={12} aria-hidden="true" />
           Admin &amp; Analyst access
         </span>
-        <h3 className="mt-4 text-2xl font-bold text-[#202124]">Staff sign in</h3>
+        <h3 className="mt-4 text-2xl font-bold text-[#202124]">Staff Login</h3>
         <p className="mt-2 leading-relaxed text-[#5F6368]">
-          This area is for Greater Chennai operations staff — admins and analysts who manage
-          incidents, reports, and decision support. Sign in to continue to the dashboard.
+          Access the operations dashboard to manage incidents, reports, and decision support.
         </p>
       </div>
 

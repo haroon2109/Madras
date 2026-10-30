@@ -96,7 +96,7 @@ export default function LandingPage() {
               Public weather
             </Link>
             <Link href="/login" className="hidden rounded-full border border-[#DADCE0] bg-white px-5 py-2.5 text-sm font-medium text-[#202124] transition-all duration-200 hover:border-[#BDC1C6] hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)] sm:block">
-              Staff sign in
+              Staff Login
             </Link>
           </div>
         </div>
@@ -118,10 +118,10 @@ export default function LandingPage() {
                 Check your zone <ArrowRight size={18} />
               </Link>
               <Link href="/login" className="inline-flex items-center justify-center gap-2 rounded-full border border-[#DADCE0] bg-white px-7 py-3.5 text-base font-medium text-[#202124] transition-all duration-200 hover:-translate-y-px hover:border-[#BDC1C6] hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
-                <Shield size={17} className="text-[#1A73E8]" aria-hidden="true" /> Staff sign in
+                <Shield size={17} className="text-[#1A73E8]" aria-hidden="true" /> Staff Login
               </Link>
             </div>
-            <p className="mt-4 text-[13px] text-[#80868B]">Free for the public — no account needed. Staff sign in for operations tools (incidents, reports, admin).</p>
+            <p className="mt-4 text-[13px] text-[#80868B]">Free for the public — no account needed. Staff login for operations tools (incidents, reports, admin).</p>
             <dl className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-[#EDF0F2] pt-8 sm:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.label}>
@@ -189,7 +189,7 @@ export default function LandingPage() {
           <p className="mx-auto mt-4 max-w-xl text-lg text-[#5F6368]">Check your zone&apos;s forecast now, or sign in for the full operations dashboard.</p>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link href="/weather" className="inline-flex items-center gap-2 rounded-full bg-[#1A73E8] px-7 py-3.5 text-base font-medium text-white transition-all duration-200 hover:-translate-y-px hover:bg-[#1765CC] hover:shadow-[0_4px_24px_rgba(26,115,232,0.25)]">Check your zone <ArrowRight size={18} /></Link>
-            <Link href="/login" className="inline-flex items-center gap-2 rounded-full border border-[#DADCE0] bg-white px-7 py-3.5 text-base font-medium text-[#202124] transition-all duration-200 hover:-translate-y-px hover:border-[#BDC1C6] hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)]"><Shield size={17} className="text-[#1A73E8]" aria-hidden="true" /> Staff sign in</Link>
+            <Link href="/login" className="inline-flex items-center gap-2 rounded-full border border-[#DADCE0] bg-white px-7 py-3.5 text-base font-medium text-[#202124] transition-all duration-200 hover:-translate-y-px hover:border-[#BDC1C6] hover:shadow-[0_4px_24px_rgba(0,0,0,0.06)]"><Shield size={17} className="text-[#1A73E8]" aria-hidden="true" /> Staff Login</Link>
           </div>
         </div>
       </section>
