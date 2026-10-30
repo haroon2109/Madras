@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Mail, Lock, Eye, EyeOff, ArrowRight, Loader2 } from "lucide-react";
+import { Mail, ArrowRight, Loader2 } from "lucide-react";
 
 export function LoginForm() {
     const router = useRouter();
@@ -12,8 +11,6 @@ export function LoginForm() {
     const callbackUrl = searchParams.get("callbackUrl") ?? "/dashboard";
 
     const [email, setEmail] = useState("admin@madras.local");
-    const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
     const [remember, setRemember] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [fieldErrors, setFieldErrors] = useState<{ email?: string }>({});
@@ -27,7 +24,7 @@ export function LoginForm() {
         try {
             const res = await signIn("credentials", {
                 email: targetEmail,
-                password: "demo",
+                password: "staff",
                 redirect: false,
             });
 
@@ -59,7 +56,7 @@ export function LoginForm() {
         try {
             const res = await signIn("credentials", {
                 email: trimmed,
-                password: password || "demo",
+                password: "staff",
                 redirect: false,
             });
 
@@ -144,41 +141,6 @@ export function LoginForm() {
                     )}
                 </div>
 
-                {/* Password Field (Simple & Non-strict) */}
-                <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                        <label
-                            htmlFor="password"
-                            className="block text-sm font-semibold text-[#202124]"
-                        >
-                            Password
-                        </label>
-                        <span className="text-xs text-[#5F6368]">(optional)</span>
-                    </div>
-                    <div className="relative group">
-                        <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-[#5F6368] group-focus-within:text-[#1A73E8] transition-colors">
-                            <Lock size={20} />
-                        </div>
-                        <input
-                            id="password"
-                            type={showPassword ? "text" : "password"}
-                            autoComplete="current-password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            placeholder="Enter any password"
-                            className={`${inputBase} pr-12 ${inputNormal}`}
-                        />
-                        <button
-                            type="button"
-                            onClick={() => setShowPassword(!showPassword)}
-                            className="absolute inset-y-0 right-0 flex items-center pr-4 text-[#5F6368] hover:text-[#202124] transition-colors"
-                            aria-label={showPassword ? "Hide password" : "Show password"}
-                        >
-                            {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                        </button>
-                    </div>
-                </div>
-
                 {/* Remember Me */}
                 <div className="flex items-center justify-between gap-4 pt-1">
                     <label htmlFor="remember" className="flex cursor-pointer select-none items-center gap-2.5">
@@ -213,7 +175,7 @@ export function LoginForm() {
                         </>
                     ) : (
                         <>
-                            Log In
+                            Log In as Staff
                             <ArrowRight className="group-hover:translate-x-0.5 transition-transform" size={20} aria-hidden="true" />
                         </>
                     )}
